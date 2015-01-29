@@ -1,4 +1,4 @@
-@<%= appname %> = do (LemontendApp, Backbone, Marionette) ->
+@<%= app_classname %> = do (LemontendApp, Backbone, Marionette) ->
   App.on "initialize:before", (options) ->
     # initialize:before
 

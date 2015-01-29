@@ -1,1 +1,1 @@
-# <%= appname %>
+# <%= app_classname %>

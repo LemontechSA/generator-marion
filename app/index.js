@@ -6,10 +6,10 @@ var yosay = require('yosay');
 module.exports = yeoman.generators.Base.extend({
   constructor: function () {
     yeoman.Base.apply(this, arguments);
-    this.argument('appname', { type: String, required: true });
+    this.argument('app_name', { type: String, required: true });
 
-    this.appname = this._.classify(this.appname);
-    this.app_filename = this._.underscored(this.appname);
+    this.app_classname = this._.classify(this.app_name);
+    this.app_filename = this._.underscored(this.app_classname);
   },
 
   writing: {
@@ -20,7 +20,7 @@ module.exports = yeoman.generators.Base.extend({
 
     copyMainFiles: function () {
       var context = {
-        appname: this.appname,
+        app_classname: this.app_classname,
         app_filename: this.app_filename
       };
 
