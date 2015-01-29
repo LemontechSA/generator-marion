@@ -18,7 +18,8 @@
   },
   "files": [
     "app",
-    "module"
+    "module",
+    "entities"
   ],
   "keywords": [
     "yeoman-generator"
