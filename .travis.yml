@@ -1,0 +1,6 @@
+language: node_js
+node_js:
+  - '0.10'
+before_install:
+  - currentfolder=${PWD##*/}
+  - if [ "$currentfolder" != 'generator-marion' ]; then cd .. && eval "mv $currentfolder generator-marion" && cd generator-marion; fi
