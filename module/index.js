@@ -31,7 +31,7 @@ module.exports = yeoman.generators.Base.extend({
 
   addModuleToApplication: function () {
     var application = this.readFileAsString('application.coffee');
-    application = application + '\n' + '#= require_tree modules/' + this.module_filename;
+    application = application + '\n' + '#= require modules/' + this.module_filename + '/' + this.module_filename + '.coffee';
     this.write('application.coffee', application);
   }
 });
